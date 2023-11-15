@@ -47,6 +47,8 @@ class LinkedList:
             if ptr_1step == ptr_2step:
                 return True
         return False
+
+
     def printList(self):
         temp = self.head
         while (temp):
