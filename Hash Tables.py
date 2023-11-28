@@ -47,6 +47,7 @@ class hash_table:
 
         return None
 
+
     def remove(self, key):
 
         index = self.hash(key)
