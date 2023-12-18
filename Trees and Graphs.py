@@ -105,12 +105,34 @@ def find_LCA(root, n1, n2):
         i += 1
     return path1[i - 1]
 
-#----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
 # the shortest path between two nodes in a graph.
 
+def shortest_path(graph, start, goal):
+    explored = []
+    queue = [[start]]
 
+    if start == goal:
+        return start
 
+    while queue:
+        path = queue.pop(0)
+        node = path[-1]
 
+        if node not in explored:
+            neighbours = graph[node]
+
+            for neighbour in neighbours:
+                new_path = list(path)
+                new_path.append(neighbour)
+                queue.append(new_path)
+
+                if neighbour == goal:
+                    return new_path
+            explored.append(node)
+
+    return None
 
 
 root = binary_tree_node(1)
