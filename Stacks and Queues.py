@@ -120,7 +120,6 @@ class queue_with_two_stacks:
 
         return res
 
-
 # ----------------------------------------------------------------
 # Function to check if a given string of parentheses is balanced.
 
